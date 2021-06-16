@@ -228,7 +228,9 @@ header button {
   .headerRight {
     display: none;
   }
-
+  .header {
+    align-items: none;
+  }
   .hamburger {
     display: contents;
     position: relative;
