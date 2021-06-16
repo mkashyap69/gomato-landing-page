@@ -228,7 +228,7 @@ header button {
   .headerRight {
     display: none;
   }
-  .header {
+  header {
   align-items: flex-start;
   }
   .hamburger {
