@@ -196,6 +196,6 @@ header button {
   color: #9f637d;
 }
 
-.second {
+.card.second {
   transform: translateY(15%);
 }
