@@ -34,10 +34,11 @@ header {
   justify-content: space-between;
   align-items: center;
   color: var(--clr-black);
+  padding-inline: 1vw;
 }
 
 header ul {
-  width: 80%;
+  width: 100%;
   list-style: none;
   display: flex;
   justify-content: space-evenly;
@@ -45,19 +46,21 @@ header ul {
 
 header p {
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 2vw, 2rem);
   letter-spacing: 3px;
   color: var(--clr-secondary-plum);
 }
 
 header li {
   font-weight: 500;
-  font-size: 1rem;
+  font-size: clamp(0.8rem, 1vw, 1rem);
+
   color: #9f637d;
   letter-spacing: 2px;
 }
 
 header button {
+  font-size: clamp(0.8rem, 1vw, 1rem);
   padding-inline: 3rem;
   padding-block: 0.5rem;
   border-radius: 2rem;
@@ -66,6 +69,10 @@ header button {
   color: var(--clr-white);
   letter-spacing: 3px;
   font-weight: 600;
+}
+
+.hamburger {
+  display: none;
 }
 
 .headerRight {
@@ -88,19 +95,20 @@ header button {
 
 .intro h1 {
   font-weight: 700;
-  font-size: 4rem;
+  font-size: clamp(2rem, 4vw, 4rem);
   color: var(--clr-accent-orchid);
 }
 
 .intro p {
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: clamp(0.8rem, 1.2vw, 1.2rem);
   line-height: 2;
   letter-spacing: 1px;
   color: #9f637d;
 }
 
 .intro button {
+  font-size: clamp(0.5rem, 1vw, 1rem);
   padding-inline: 3rem;
   padding-block: 1.2rem;
   border-radius: 2rem;
@@ -141,13 +149,13 @@ header button {
 }
 .whyBest h2 {
   font-weight: 700;
-  font-size: 3rem;
+  font-size: clamp(1.5rem, 3vw, 3rem);
   color: var(--clr-accent-orchid);
 }
 
 .whyBest p {
   font-weight: 400;
-  font-size: 1rem;
+  font-size: clamp(0.8rem, 1vw, 1rem);
   color: #9f637d;
   letter-spacing: 2px;
 }
@@ -193,9 +201,113 @@ header button {
 .card h2 {
   line-height: 1.7;
   letter-spacing: 1px;
+  font-size: clamp(0.8rem, 1.5vw, 1.5rem);
   color: #9f637d;
 }
 
 #second {
   transform: translateY(15%);
+}
+
+@media (max-width: 1025px) {
+  .introBtns {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .introBtns button:nth-child(2) {
+    margin-left: 0rem;
+  }
+  .headerRight {
+    margin-right: 5%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 750px) {
+  .headerRight {
+    display: none;
+  }
+
+  .hamburger {
+    display: contents;
+    position: relative;
+  }
+
+  .hamburger p {
+    position: absolute;
+    left: 90%;
+    z-index: 2;
+  }
+
+  #menu {
+    position: absolute;
+    left: 90%;
+    z-index: 3;
+    opacity: 0;
+  }
+  .mobMenu {
+    position: absolute;
+    right: 5%;
+    width: 90%;
+    background-color: var(--clr-primary-peach);
+    transform: translateY(-300%);
+    transition: all 0.01s;
+  }
+
+  #menu:checked ~ .mobMenu {
+    margin-block: 4rem;
+    transform: translateY(80%);
+    transition: all 0.2s;
+  }
+}
+
+@media (max-width: 600px) {
+  .mobMenu ul {
+    padding-left: 0px;
+  }
+  .mobMenu li {
+    font-size: 0.5rem;
+  }
+  .middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .intro {
+    width: 100%;
+    align-items: center;
+  }
+  .image {
+    width: 100%;
+    align-items: center;
+  }
+  .introBtns button {
+    width: 100%;
+  }
+  .bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+  .whyBest {
+    width: 100%;
+  }
+  .whyBestBtns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 100%;
+    margin-top: 5vh;
+    margin-left: -25%;
+  }
+
+  #second {
+    transform: translateY(0%);
+  }
 }
