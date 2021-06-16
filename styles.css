@@ -229,7 +229,7 @@ header button {
     display: none;
   }
   .header {
-    align-items: none;
+  align-items: flex-start;
   }
   .hamburger {
     display: contents;
