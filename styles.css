@@ -262,6 +262,22 @@ header button {
   }
 }
 
+@media (max-width: 354px) {
+  #menu {
+    position: absolute;
+    left: 90%;
+    top: 11.5%;
+    z-index: 3;
+    opacity: 0;
+  }
+
+  #menu:checked ~ .mobMenu {
+    margin-block: 4rem;
+    transform: translateY(0%);
+    transition: all 0.2s;
+  }
+}
+
 @media (max-width: 600px) {
   .mobMenu ul {
     padding-left: 0px;
