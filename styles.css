@@ -195,3 +195,7 @@ header button {
   letter-spacing: 1px;
   color: #9f637d;
 }
+
+.second {
+  transform: translateY(15%);
+}
