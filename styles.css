@@ -122,8 +122,8 @@ header button {
 
 .intro button:nth-child(2) {
   background-color: white;
-  border: 1px solid black;
-  color: var(--clr-black);
+  border: 1px solid #e395df;
+  color: #e395df;
   margin-left: 1rem;
 }
 
