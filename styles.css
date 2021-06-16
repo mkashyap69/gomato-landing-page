@@ -262,7 +262,7 @@ header button {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
   #menu {
     position: absolute;
     left: 90%;
