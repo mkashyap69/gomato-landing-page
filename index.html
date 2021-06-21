@@ -16,7 +16,7 @@
     <div id="root">
       <div class="container">
         <div class="top">
-          <header>
+          <header class="header">
             <p>Gomato</p>
             <div class="headerRight">
               <ul>
@@ -100,5 +100,27 @@
         </div>
       </div>
     </div>
+    <script>
+    //   window.onscroll = function () {
+    //     scrollFunction();
+    //   };
+
+      function scrollFunction() {
+        if (window.scrollY > 78 && window.scrollY < 320) {
+            document.querySelector('.middle').style.transform = 'scale(0)';
+          document.querySelector('.middle').style.transition = 'all 0.3s';
+         
+          document.querySelector('.bottom').style.transform = 'scale(0.7)';
+          document.querySelector('.bottom').style.transition = 'all 0.3s';
+        } else {
+          document.querySelector('.bottom').style.transform = 'scale(1.09)';
+          document.querySelector('.bottom').style.transition = 'all 0.2s';
+
+          document.querySelector('.middle').style.transform = 'scale(1.03)';
+          document.querySelector('.middle').style.transition = 'all 0.2s';
+          
+        }
+      }
+    </script>
   </body>
 </html>
